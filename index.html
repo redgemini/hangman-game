@@ -14,36 +14,31 @@
         <title>Hangman!</title>
 </head>
     <body>
-        <div class: "container">
-            <div class="jumbotron">
-                    <h1 class="display-4">It's Time for Hangman</h1>
-                    <p class="lead">This is a simple hero unit, a simple jumbotron-style component 
-                        for calling extra attention to featured content or information.</p>
-                    <hr class="my-4">
-                    <p>It uses utility classes for typography and spacing to space content out within 
-                        the larger container.</p>
-            </div> 
-        </div> 
-            
+        <header>
+            <h1>It's Time for Hangman</h1>
+        </header>   
+                   <hr>
             <ul class="list-group">
+                
+                
                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Word to Guess:<span class="badge badge-primary badge-pill">14</span>
+                     Wins:<span id="totalWins">0</span>
                     </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Wrong Guesses:<span class="wrongGuesses">2</span>
+                      Losses:<span id="totalLosses">0</span>
                     </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Guesses Remaining:<span class="numGuesses">8</span>
+                    Guesses Remaining:<span id="guessesRemaining">0</span>
                     </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Games Played:<span class="gameCounter">14</span>
+                    Word to Guess:<span class="badge badge-primary badge-pill">0</span>
                     </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                     Wins:<span class="winCounter">2</span>
+                    Incorrect Guesses:<span class="wrongGuesses">0</span>
                     </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                      Losses:<span class="lossCounter">1</span>
-                    </li>
+                     Games Played:<span class="gameCounter">0</span>
+                    </li>         
             </ul>
 <hr>
 
@@ -54,29 +49,30 @@
             <h5 class="mb-1">Guess This Word</h5>
             <small>LETTERS TO GUESS</small>
           </div>
-          <p class="mb-1">_ _ _ _ _ _ _ </p>
+          <p id="gameBoard" class="mb-1">_ _ _ _ _ _ _ _ _ _ </p>
           <small>Hint</small>
         </a>
 
         <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Letter Selection</h5>
-            <small class="text-muted">LETTERS USED</small>
-          </div>
-          <p class="mb-1">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p>
-          <small class="text-muted">Donec id elit non mi porta.</small>
-        </a>
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 id="guessThisWord" class="mb-1">Letters Guessed</h5>
+                  <small class="text-muted">Letters Guessed</small>
+                </div>
+                <p class="mb-1">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p>
+                <small class="text-muted">Letters Guessed</small>
+              </a>
 
-        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-          <div class="d-flex w-100 justify-content-between">s
-            <h5 class="mb-1">List group item heading</h5>
-            <small class="text-muted">3 days ago</small>
-          </div>
-          <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-          <small class="text-muted">Donec id elit non mi porta.</small>
-        </a>
-
+              <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">Letters Remaining</h5>
+                      <small class="text-muted">Letters Remaining</small>
+                    </div>
+                    <p class="mb-1">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p>
+                    <small class="text-muted">Letters Remaining</small>
+                  </a>
+        
       </div>
+
       <footer>
             <div class="fixed-bottom">...</div>
     </footer>  
