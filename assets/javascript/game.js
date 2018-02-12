@@ -6,3 +6,5 @@
 //if guess incorrect increment incorrectGuess by one
 //if incorrect guesses greater than 5
 
+alert("test");
+alert("HELP");
