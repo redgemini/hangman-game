@@ -35,8 +35,13 @@ function startGame() {
     selectedWord = wordOptions[Math.floor(Math.random() * wordOptions.length)]; 
     lettersInWord = selectedWord.split("");  numSpaces = lettersInWord.length;
 
-    function inspectLetters(letter) {
-        alert (letter);
+    for(var i=0; i<numSpaces; i++){
+    gameBoard.push("_"); }
+
+
+ //Check selected letter against word
+function inspectLetters(letter) {
+        alert ("letter");
         var lettersInWord = false;
         for (var i=0; i<numBlanks; i++)
     
@@ -46,8 +51,6 @@ function startGame() {
             alert("letter found");
         }
     }
-for(var i=0; i<numSpaces; i++){
-    gameBoard.push("_"); }
 
 //HTML Link
 document.getElementById("gameBoard").innerHTML = gameBoard; 

@@ -8,18 +8,18 @@ body {
     font-size: 18px;
     line-height: 34px;
     color: #03000a;
-    background:#a239ca;
+   
+    background:#233237;
     margin:10%;
     margin-top:5%;
 }
 
 .list-group-item.active{
-  background:#4717f6
-  
+  background:#b48484;
 }
 
 h1, h2, h3 h4{
-  color: #03000a;
+  color:  #e7dfdd;
   text-align: center;
 }
 
