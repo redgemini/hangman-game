@@ -15,64 +15,51 @@
 </head>
     <body>
         <header>
-            <h1>It's Time for Hangman</h1>
+            <h1>Hangman</h1>
         </header>   
                    <hr>
-            <ul class="list-group">
-                
-                
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                     Wins:<span id="totalWins">0</span>
-                    </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                      Losses:<span id="totalLosses">0</span>
-                    </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Guesses Remaining:<span id="guessesRemaining">0</span>
-                    </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Word to Guess:<span class="badge badge-primary badge-pill">0</span>
-                    </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Incorrect Guesses:<span class="wrongGuesses">0</span>
-                    </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                     Games Played:<span class="gameCounter">0</span>
-                    </li>         
-            </ul>
-<hr>
-
-<div class="list-group">
-
+        <div class="list-group">
         <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-          <div class="d-flex w-100 justify-content-between">
+            <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">Guess This Word</h5>
-            <small>LETTERS TO GUESS</small>
           </div>
           <p id="gameBoard" class="mb-1">_ _ _ _ _ _ _ _ _ _ </p>
           <small>Hint</small>
         </a>
-
+<hr>
         <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-between">
                   <h5 id="guessThisWord" class="mb-1">Letters Guessed</h5>
                   <small class="text-muted">Letters Guessed</small>
                 </div>
-                <p class="mb-1">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p>
+                <p class="mb-1">X Y Z</p>
                 <small class="text-muted">Letters Guessed</small>
               </a>
-
+<hr>
               <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
                     <div class="d-flex w-100 justify-content-between">
                       <h5 class="mb-1">Letters Remaining</h5>
                       <small class="text-muted">Letters Remaining</small>
                     </div>
-                    <p class="mb-1">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p>
+                    <p class="mb-1">A B C </p>
                     <small class="text-muted">Letters Remaining</small>
                   </a>
-        
-      </div>
-
+</div>  
+<hr>
+<ul class="list-group">
+                
+                
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+             Wins:<span id="totalWins">0</span>
+            </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+              Losses:<span id="totalLosses">0</span>
+            </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            Guesses Remaining:<span id="guessesRemaining">0</span>
+            </li>
+       
+    </ul>
       <footer>
             <div class="fixed-bottom">...</div>
     </footer>  
