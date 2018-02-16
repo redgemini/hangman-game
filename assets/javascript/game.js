@@ -50,6 +50,7 @@ document.getElementById("guessThisWord").innerHTML = gameBoard;
 document.getElementById("guessesRemaining").innerHTML = guessesRemaining; 
 document.getElementById("totalWins").innerHTML = totalWins;
 document.getElementById("totalLosses").innerHTML = totalLosses;
+document.getElementById("wrongGuesses").innerHTML = wrongGuesses;
 
 //Console.log
 console.log(selectedWord);
@@ -103,10 +104,11 @@ function roundComplete(){
 
     else if(guessesRemaining===0){
         totalLosses++;
-        alert("You Lose!");
+        alert(selectedWord);
 
     document.getElementById("totalLosses").innerHTML=totalLosses;
 
+    startGame();
     }
 }
 
