@@ -14,67 +14,111 @@
 //MagentaReds Help!: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 //-----------------------------------------------------------------------------------------------------------------------------
 
-//Variables
-var wordOptions = ["bob schneider", "janis joplin", "robert earl keen", "townes van zandt", 
+//Variables Defined
+    var wordOptions = ["bob schneider", "janis joplin", "robert earl keen", "townes van zandt", 
     "stevie ray vaughn", "willie nelson", "gary clark jr", "jimmie vaughan", "monte montgomery"];
-var selectedWord = "";
-var lettersInWord = [];
-var numSpaces = 0;
-var gameBoard = [];
-var attemptedLetters = [];
-var findLetterInWord = false;
+    var selectedWord = "";
+    var lettersInWord = [];
+    var numSpaces = 0;
+    var gameBoard = [];
+    var wrongGuesses = [];
+    var findLetterInWord = false;
 
 
 //Game Stat
-var totalWins = 0;
-var totalLosses = 0;
-var guessesRemaining= 9;
+    var totalWins = 0;
+    var totalLosses = 0;
+    var guessesRemaining= 9;
 
-//Functions
-function startGame() {
+//Function Start Game
+    function startGame() {
     selectedWord = wordOptions[Math.floor(Math.random() * wordOptions.length)]; 
-    lettersInWord = selectedWord.split("");  numSpaces = lettersInWord.length;
+    lettersInWord = selectedWord.split("");  
+    numSpaces = lettersInWord.length;
 
-    for(var i=0; i<numSpaces; i++){
-    gameBoard.push("_"); }
+    //Reset
+    var guessesRemaining= 9;
+    var wrongGuesses = [];
+    var gameBoard = [];
 
-
- //Check selected letter against word
-function inspectLetters(letter) {
-        alert ("letter");
-        var lettersInWord = false;
-        for (var i=0; i<numBlanks; i++)
-    
-    
-        if(SelectedWord[i] = letter) {
-            islettersInWord = true;
-            alert("letter found");
-        }
-    }
-
-//HTML Link
-document.getElementById("gameBoard").innerHTML = gameBoard; 
-document.getElementById("totalWins").innerHTML = totalWins;
-document.getElementById("totalLosses").innerHTML = totalLosses;
-document.getElementById("guessesRemaining").innerHTML = guessesRemaining;
-
-//console.log for startGame * 
-//Per MagentaReds: Removed from functions for game board to load correctly in log
-
-    console.log(selectedWord);
-    console.log(lettersInWord);
-    console.log(numSpaces);
-    console.log(gameBoard);
+//Creates game board with correct number of spaces
+for(var i=0; i<numSpaces; i++){
+    gameBoard.push("_");
 }
 
+//HTML Link
+document.getElementById("guessThisWord").innerHTML = gameBoard;
+document.getElementById("guessesRemaining").innerHTML = guessesRemaining; 
+document.getElementById("totalWins").innerHTML = totalWins;
+document.getElementById("totalLosses").innerHTML = totalLosses;
 
+//Console.log
+console.log(selectedWord);
+console.log(lettersInWord);
+console.log(numSpaces);
+console.log(gameBoard); 
+}
+//Check if letter is in word
+function checkLetters(letter) {
+    console.log(letter);
+
+    var isLetterInWord = false;
+for(var i=0; i<numSpaces; i++){
+
+       if(selectedWord[i] ===letter){
+           isLetterInWord =true;
+        alert("letter found");
+       }
+   }
+
+   if(isLetterInWord){
+   for(var i=0; i<numSpaces; i++) {
+       if(selectedWord[i] === letter){
+           gameboard[i] =letter;
+       }
+   } 
+
+}
+else {
+    wrongGuesses.push(letter);
+    guessesRemaining --
+}
+}
+//Completing round and updating counters
+function roundComplete(){
+
+    console.log("totalWins + totalLosses + guessesRemaining +numSpaces");
+
+    document.getElementById("numSpaces").innerHTML=guessesRemaining;
+    document.getElementById("wordToGuess"). gameBoard.toString();
+
+    if(lettersInWord.toString() === gameBoard.toString()){
+    totalWins++;
+    alert("WINNER!");
+
+    elseif (guessesRemaining===0);{
+        totalLosses++;
+        alert("You Lose!");
+    }
+
+    document.getElementById(totalWins).innerHTML = totalWins;
+    document.getElementById(totalLosses).innerHTML = totalLosses;
+
+    startGame();
+}
+}
 //Processes
 
 startGame();
 
-//NEED TA HELP
+document.onkeyup = function(event) {
+    var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
+    checkLetters(letterGuessed);
+    roundComplete();
 
-document.onKeyUp = function(event){
-    var letterSelected = String.fromCharCode(event.toLowerCase)();
-    console.log(letterSelected);
+//Console.log
+console.log(letter);
+console.log(letterGuessed);
+console.log(gameBoard);
+
 }
