@@ -36,9 +36,9 @@
     numSpaces = lettersInWord.length;
 
     //Reset
-    var guessesRemaining= 9;
-    var wrongGuesses = [];
-    var gameBoard = [];
+    guessesRemaining= 9;
+    wrongGuesses = [];
+    gameBoard = [];
 
 //Creates game board with correct number of spaces
 for(var i=0; i<numSpaces; i++){
@@ -121,8 +121,12 @@ document.onkeyup = function(event) {
     roundComplete();
 
 //Console.log
-console.log(letter);
 console.log(letterGuessed);
 console.log(gameBoard);
 
 }
+//TA Questions - (not sure how to research solutions)...
+//1) When letters are entered in HTML the spaces go away. 
+//2) commas between spaces will not go away. 
+//3) win alert pops up before last word is entered. 
+//4)loss counter will not reset.
