@@ -32,11 +32,11 @@
 <!--Guess The Word -->
     <div class="list-group">
         <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-            
+
             <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1">Guess This Word</h5>
             </div>
-          
+          <!--LINK TO JS "guessThisWord-->
             <p id="guessThisWord" class="mb-1">_ _ _ _ _ _ _ _ _ _ </p>
             <small>Hint</small>
         </a>
@@ -48,11 +48,11 @@
         <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
 
             <div class="d-flex w-100 justify-content-between">
-                  <h5 id="wrongGuesses" class="mb-1">Letters Guessed</h5>
+                  <h5 id="wrongGuesses" class="mb-1">Wrong Guesses</h5>
                   <small class="text-muted">Wrong Guesses</small>
             </div>
 
-                <p class="mb-1">X Y Z</p>
+                <p id="wrongGuesses" class="mb-1"></p>
                 <small class="text-muted">Wrong Guesses</small>
         </a>
     </div>
@@ -61,16 +61,24 @@
 
 <!--Unordered List Div-->
     <div>
-        <ul class="list-group">    
+        <ul class="list-group">
+
             <li class="list-group-item d-flex justify-content-between align-items-center">
-                Wins:<span id="totalWins">0</span>
-                </li>
+                Wrong Guesses:<span id="wrongGuesses">0</span>
+            </li>
+
             <li class="list-group-item d-flex justify-content-between align-items-center">
-                Losses:<span id="totalLosses">0</span>
-                </li>
+               Guesses Remaining:<span id="guessesRemaining">0</span>
+            </li>
+            
             <li class="list-group-item d-flex justify-content-between align-items-center">
-                Guesses Remaining:<span id="guessesRemaining">0</span>
+                Total Wins:<span id="totalWins">0</span>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Total Losses:<span id="totalLosses">0</span>
                 </li>
+            
         </ul>
     </div>  
 

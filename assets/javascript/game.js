@@ -15,8 +15,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------
 
 //Variables Defined
-    var wordOptions = ["bob schneider", "janis joplin", "robert earl keen", "townes van zandt", 
-    "stevie ray vaughn", "willie nelson", "gary clark jr", "jimmie vaughan", "monte montgomery"];
+    var wordOptions = ["houston", "dallas", "austin", "waco", "lubbock","galveston","amarillo", "mcallen","laredo","odessa","fredericksburg"];
     var selectedWord = "";
     var lettersInWord = [];
     var numSpaces = 0;
@@ -63,50 +62,55 @@ function checkLetters(letter) {
     console.log(letter);
 
     var isLetterInWord = false;
-for(var i=0; i<numSpaces; i++){
 
+for(var i=0; i<numSpaces; i++){
        if(selectedWord[i] ===letter){
            isLetterInWord =true;
-        alert("letter found");
        }
    }
 
    if(isLetterInWord){
    for(var i=0; i<numSpaces; i++) {
        if(selectedWord[i] === letter){
-           gameboard[i] =letter;
+           gameBoard[i]=letter;
        }
    } 
-
 }
 else {
     wrongGuesses.push(letter);
     guessesRemaining --
 }
+console.log(gameBoard);
 }
 //Completing round and updating counters
 function roundComplete(){
 
-    console.log("totalWins + totalLosses + guessesRemaining +numSpaces");
+    console.log("totalWins: " + totalWins + " | totalLosses: " + totalLosses + " | guessesRemaining " + guessesRemaining);
 
-    document.getElementById("numSpaces").innerHTML=guessesRemaining;
-    document.getElementById("wordToGuess"). gameBoard.toString();
+    document.getElementById("guessesRemaining").innerHTML=guessesRemaining;
+    document.getElementById("guessThisWord").innerHTML=gameBoard.toString();
+    document.getElementById("wrongGuesses").innerHTML=wrongGuesses.join();
 
+//Did player Win?
     if(lettersInWord.toString() === gameBoard.toString()){
     totalWins++;
     alert("WINNER!");
 
-    elseif (guessesRemaining===0);{
-        totalLosses++;
-        alert("You Lose!");
-    }
-
-    document.getElementById(totalWins).innerHTML = totalWins;
-    document.getElementById(totalLosses).innerHTML = totalLosses;
+    document.getElementById("totalWins").innerHTML = totalWins;
 
     startGame();
+    }
+
+    else if(guessesRemaining===0){
+        totalLosses++;
+        alert("You Lose!");
+
+    document.getElementById("totalLosses").innerHTML=totalLosses;
+
+    }
 }
-}
+
+
 //Processes
 
 startGame();
