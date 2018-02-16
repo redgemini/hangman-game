@@ -1,6 +1,7 @@
 html, body {
     height: 100%;
     margin: 0;
+    background:url("assets/image/texasFlag.jpg");
 }
     
 body {
@@ -8,14 +9,13 @@ body {
     font-size: 18px;
     line-height: 34px;
     color: #03000a;
-   
     background:#233237;
     margin:10%;
     margin-top:5%;
 }
 
 .list-group-item.active{
-  background:#b48484;
+  background:#ee5454;
 }
 
 h1, h2, h3 h4{
@@ -27,7 +27,9 @@ h1, h2, h3 h4{
   background-color: #e7dfdd;
 }
 
-
+header{
+  
+}
 
 
 
